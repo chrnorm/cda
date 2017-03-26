@@ -1,0 +1,17 @@
+NAME,URL,LAT_MIN,LAT_MAX,LONG_MIN,LONG_MAX,WIDTH,HEIGHT,SCALE,RES
+iapygia,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/THEMIS_DayIR_ControlledMosaic_Iapygia_30S45E_100mpp.cub/max.jpg,-30,0,45,90,26674,17783,100,592.747
+amazonis,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/Mars-THEMIS-Day-IR-Controlled-Mosaic-Amazonis-00N-180E-100mpp.cub/max.jpg,0,30,-180,-135,26674,17783,100,592.747
+lunaepalus,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/Mars-THEMIS-Day-IR-Controlled-Mosaic-Lunae-Palus-00N-270E-100mpp.cub/max.jpg,0,30,-90,-45,26674,17783,100,592.747
+sinussabaeus,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/Mars-THEMIS-Day-IR-Controlled-Mosaic-Sinus-Sabaeus-30S00E-100mpp.cub/max.jpg,-30,0,0,45,26674,17783,100,592.747
+oxiapalus,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/Mars-THEMIS-Day-IR-Controlled-Mosaic-Oxia-Palus-00N-315E-100mpp.cub/max.jpg,0,30,-45,0,26674,17783,100,592.747
+margaritifersinus,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/Mars-THEMIS-Day-IR-Controlled-Mosaic-Margaritifer-Sinus-30S-315E-100mpp.cub/max.jpg,-30,0,-45,0,26674,17783,100,592.747
+aeolis,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/Mars-THEMIS-Day-IR-Controlled-Mosaic-Aeolis-30S-135E-100mpp.cub/max.jpg,-30,0,135,180,26674,17783,100,592.747
+coprates,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/Mars-THEMIS-Day-IR-Controlled-Mosaic-Coprates-30S-270E-100mpp.cub/max.jpg,-30,0,-90,-45,26674,17783,100,592.747
+elysium,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/THEMIS_DayIR_ControlledMosaic_Elysium_00N135E_100mpp.cub/max.jpg,0,30,135,180,26674,17783,100,592.747
+arabia,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/THEMIS_DayIR_ControlledMosaic_Arabia_000N000E_100mpp.cub/max.jpg,0,30,0,45,26674,17783,100,592.747
+tharsis,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/THEMIS_DayIR_ControlledMosaic_Tharsis_000N225E_100mpp.cub/max.jpg,0,30,-135,-90,26674,17783,100,592.747
+maretyrrhenum,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/THEMIS_DayIR_ControlledMosaic_MareTyrrhenum_30S090E_100mpp.cub/max.jpg,-30,0,90,135,26674,17783,100,592.747
+phoenicislacus,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/THEMIS_DayIR_ControlledMosaic_PhoenicisLacus_30S225E_100mpp.cub/max.jpg,-30,0,-135,-90,26674,17783,100,592.747
+memnonia,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/THEMIS_DayIR_ControlledMosaic_Memnonia_30S180E_100mpp.cub/max.jpg,-30,0,-180,-135,26674,17783,100,592.747
+syrtismajor,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/THEMIS_DayIR_ControlledMosaic_SyrtisMajor_00N45E_100mpp.cub/max.jpg,0,30,45,90,26674,17783,100,592.747
+amenthes,https://astropedia.astrogeology.usgs.gov/download/Mars/Odyssey/THEMIS-Day-IR-Controlled-Mosaic/THEMIS_DayIR_ControlledMosaic_Amenthes_000N090E_100mpp.cub/max.jpg,0,30,90,135,26674,17783,100,592.747
