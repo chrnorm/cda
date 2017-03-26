@@ -1,0 +1,3 @@
+[submodule "tensorbox"]
+	path = tensorbox
+	url = https://github.com/chrisnorman27/TensorBox
