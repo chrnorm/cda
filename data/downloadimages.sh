@@ -2,6 +2,8 @@
 
 inputfile=images/themis_images.csv
 
+mkdir -p images/themis_full
+
 OLDIFS=$IFS
 IFS=","
 # delete the first line from the file containing column names
