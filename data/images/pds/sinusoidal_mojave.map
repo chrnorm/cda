@@ -1,0 +1,25 @@
+#****************************************************************************
+# Map Template file for Mojave Crater
+#
+#****************************************************************************
+
+Group = Mapping
+  ProjectionName  = Sinusoidal
+  CenterLongitude = 326.0 <degrees>
+
+  TargetName         = Mars
+  EquatorialRadius   = 3396190.0 <meters>
+  PolarRadius        = 3376200.0 <meters>
+
+  LatitudeType       = Planetocentric
+  LongitudeDirection = PositiveEast
+  LongitudeDomain    = 360 <degrees>
+
+  MinimumLatitude    = 6.4 <degrees>
+  MaximumLatitude    = 8.8 <degrees>
+  MinimumLongitude   = 325.8 <degrees>
+  MaximumLongitude   = 328.3 <degrees>
+
+  PixelResolution    = 10 <meters/pixel>
+  #Scale              = 512.0 <pixels/degree>
+End_Group
