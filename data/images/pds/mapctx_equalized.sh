@@ -3,6 +3,30 @@
 # BASH script to convert PSD image files into map-projected ISIS CUBE files
 # using the following website as a reference:
 # https://isis.astrogeology.usgs.gov/fixit/projects/isis/wiki/Working_with_Mars_Reconnaissance_Orbiter_CTX_Data
+#
+# command line arguments:
+# ./mapctx_equalized.sh <mapfile> <make seamless mosaic>
+# where
+# <mapfile> is the path to the USGS ISIS mapfile
+# <make seamless mosaic> - if true, will call equalize and noseam programs to stitch the mosaic together. if false, will call automos to stitch the mosaic together.
+
+# check for correct number of arguments
+if [ "$#" -ne 2 ]; then
+	echo "Usage: $0 <mapfile> <make seamless mosaic>" >&2
+	exit 1
+fi
+
+# check that mapfile exists
+if [[ ! -e $1 ]]; then
+	echo "Mapfile $1 does not exist" >&2
+	exit 1
+fi
+
+# check <make seamless mosaic> flag is either 1 or 0
+if [ "$2" != "1" ] && [ "$2" != "0" ]; then
+	echo "<make seamless mosaic flag> must be either 1 or 0, you entered $2" >&2
+	exit 1
+fi
 
 numfiles=$(ls download/*.IMG | wc -l)
 numdone=0
@@ -44,7 +68,7 @@ for filename in download/*.IMG; do
 
 	echo Map projecting ${fbname}	
 	# the cam2map application converts a camera image to a map projected image
-	cam2map from=processing/${fbname}.eo.cal.cub map=sinusoidal_mojave.map to=mapped/${fbname}.mapped.cub pixres=map defaultrange=map
+	cam2map from=processing/${fbname}.eo.cal.cub map=$1 to=mapped/${fbname}.mapped.cub pixres=map defaultrange=map
 	# clean up
 	rm processing/${fbname}.eo.cal.cub
 
@@ -53,22 +77,29 @@ for filename in download/*.IMG; do
 	echo Completed ${numdone}/${numfiles}
 done
 
-# create list of all map projected images
-cd mapped 
-ls -d -1 $PWD/*.* > ../${output}/allmapped.lis
-cd ..
+# create mosaic: check whether user wants seamless mosaic
+if [ "$2" = "1" ]; then
 
-# create 'hold list' - this is the image the equalization shall be based from
-# first image is selected to be held
-cat ${output}/allmapped.lis | head -n 1 > ${output}/hold.lis
+	# create list of all map projected images
+	cd mapped 
+	ls -d -1 $PWD/*.* > ../${output}/allmapped.lis
+	cd ..
 
-# equalize map projected images
-equalizer fromlist=${output}/allmapped.lis holdlist=${output}/hold.lis
+	# create 'hold list' - this is the image the equalization shall be based from
+	# first image is selected to be held
+	cat ${output}/allmapped.lis | head -n 1 > ${output}/hold.lis
 
-# create list of all equalized images
-cd mapped
-ls -d -1 $PWD/*equ*.cub > ../${output}/equ.lis
-cd ..
+	# equalize map projected images
+	equalizer fromlist=${output}/allmapped.lis holdlist=${output}/hold.lis
 
-# create noseam mosaic of the images
-noseam fromlist=${output}/equ.lis to=${output}/mosaic_equ.cub samples=73 lines=73
+	# create list of all equalized images
+	cd mapped
+	ls -d -1 $PWD/*equ*.cub > ../${output}/equ.lis
+	cd ..
+
+	# create noseam mosaic of the images
+	noseam fromlist=${output}/equ.lis to=${output}/mosaic_equ.cub samples=73 lines=73
+else
+	# create automos mosaic of the images
+	automos fromlist=${output}/allmapped.lis mosaic=${output}/mosaic.cub
+fi
