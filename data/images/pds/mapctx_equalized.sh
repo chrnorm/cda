@@ -77,14 +77,13 @@ for filename in download/*.IMG; do
 	echo Completed ${numdone}/${numfiles}
 done
 
+# create list of all map projected images
+cd mapped 
+ls -d -1 $PWD/*.* > ../${output}/allmapped.lis
+cd ..
+
 # create mosaic: check whether user wants seamless mosaic
 if [ "$2" = "1" ]; then
-
-	# create list of all map projected images
-	cd mapped 
-	ls -d -1 $PWD/*.* > ../${output}/allmapped.lis
-	cd ..
-
 	# create 'hold list' - this is the image the equalization shall be based from
 	# first image is selected to be held
 	cat ${output}/allmapped.lis | head -n 1 > ${output}/hold.lis
